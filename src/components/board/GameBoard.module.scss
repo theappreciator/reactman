@@ -1,0 +1,19 @@
+.GameBoard {
+    display: flex;
+    justify-content: center;
+
+    .board {
+        position: relative;
+        font-family: monospace;
+
+        .row {
+            display: flex;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .col {
+            display: inline-block;
+        }
+    }
+}

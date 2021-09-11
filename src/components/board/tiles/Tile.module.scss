@@ -1,0 +1,116 @@
+$tile-height: 20px;
+$tile-width: $tile-height;
+$border-width: 3px;
+$border-radius: 8px;
+$background-empty: #000;
+$background-edge: $background-empty;
+$background-inside: $background-empty;
+$background-pellet: $background-empty;
+$background-warp: #0b0;
+$border-edge-color: #1919A6;
+$border-inside-color: #1919A6;
+$border-edge-filler: $border-width solid $background-edge;
+$border-edge: $border-width solid $border-edge-color;
+$border-inside-filler: $border-width solid $background-inside;
+$border-inside: $border-width solid $border-inside-color;
+
+
+
+.Tile {
+    margin: 0px;
+    padding: 0px;
+
+    :first-child {
+        width: $tile-width + ($border-width * 2);
+        height: $tile-height + ($border-width * 2);
+        box-sizing: border-box;
+    }
+
+    .edgeCornerTopLeft {
+        border-left: $border-edge;
+        border-top: $border-edge;
+        border-top-left-radius: $border-radius;
+        background-color: $background-edge;
+    }
+    .edgeCornerTopRight {
+        border-right: $border-edge;
+        border-top: $border-edge;
+        border-top-right-radius: $border-radius;
+        background-color: $background-edge;
+    }
+    .edgeCornerBottomLeft {
+        border-left: $border-edge;
+        border-bottom: $border-edge;
+        border-bottom-left-radius: $border-radius;
+        background-color: $background-edge;
+    }
+    .edgeCornerBottomRight {
+        border-right: $border-edge;
+        border-bottom: $border-edge;
+        border-bottom-right-radius: $border-radius;
+        background-color: $background-edge;
+    }
+    .edgeVertical {
+        border-left: $border-edge;
+        border-right: $border-edge;
+        background-color: $background-edge;
+    }
+    .edgeHorizontal {
+        border-top: $border-edge;
+        border-bottom: $border-edge;
+        background-color: $background-edge;
+    }
+    .insideCornerTopLeft {
+        border-left: $border-inside;
+        border-top: $border-inside;
+        border-top-left-radius: $border-radius;
+        background-color: $background-inside;
+    }
+    .insideCornerTopRight {
+        border-right: $border-inside;
+        border-top: $border-inside;
+        border-top-right-radius: $border-radius;
+        background-color: $background-inside;
+    }
+    .insideCornerBottomLeft {
+        border-left: $border-inside;
+        border-bottom: $border-inside;
+        border-bottom-left-radius: $border-radius;
+        background-color: $background-inside;
+    }
+    .insideCornerBottomRight {
+        border-right: $border-inside;
+        border-bottom: $border-inside;
+        border-bottom-right-radius: $border-radius;
+        background-color: $background-inside;
+    }
+    .insideVertical {
+        border-left: $border-inside;
+        border-right: $border-inside;
+        background-color: $background-inside;
+    }
+    .insideHorizontal {
+        border-top: $border-inside;
+        border-bottom: $border-inside;
+        background-color: $background-inside;
+    }
+    .pellet {
+        background-color: #ff0;
+        clip-path: circle(8%);
+    }
+    .powerPellet {
+        background-color: #ff0;
+        clip-path: circle(28%);
+    }
+    .empty {
+        background-color: $background-empty;
+    }
+    .warpLeft {
+        background-color: $background-warp;
+        clip-path: polygon(60% 20%, 60% 42%, 90% 42%, 90% 58%, 60% 58%, 60% 80%, 5% 50%);
+    }
+    .warpRight {
+        background-color: $background-warp;
+        clip-path: polygon(40% 20%, 40% 42%, 10% 42%, 10% 58%, 40% 58%, 40% 80%, 95% 50%);
+    }
+}

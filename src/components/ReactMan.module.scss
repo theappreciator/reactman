@@ -1,0 +1,43 @@
+$reactman-height: 20px;
+$reactman-width: $reactman-height;
+
+.ReactMan {
+    position: absolute;
+    background-color: #ff0;
+    border-radius: 50%;
+    width: $reactman-width;
+    height: $reactman-height;
+
+    .mouth {
+        position: absolute;
+        background: #000;
+        border-radius: 50%;
+        width: $reactman-width;
+        height: $reactman-height;
+        
+        &.right {
+            top: 0px;
+            left: 1px;
+            
+            clip-path: polygon($reactman-width 10%, 40% 50%, $reactman-width 90%);
+        }
+
+        &.left {
+            top: 0px;
+            right: 1px;
+            clip-path: polygon(0 10%, 60% 50%, 0 90%);
+        }
+
+        &.up {
+            left: 0px;
+            bottom: 1px;
+            clip-path: polygon(10% 0, 50% 60%, 90% 0);
+        }
+
+        &.down {
+            left: 0px;
+            top: 1px;
+            clip-path: polygon(10% $reactman-height, 50% 40%, 90% $reactman-height);
+        }
+      }
+}
